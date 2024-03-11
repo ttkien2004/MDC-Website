@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDC-Elearning</title>
+    <link rel="stylesheet" href="mdc-css/header.css">
+    <link rel="stylesheet" href="mdc-css/general.css">
+    <link rel="stylesheet" href="mdc-css/main.css">
+    <link rel="stylesheet" href="mdc-css/footer.css">
+    <link rel="stylesheet" href="mdc-css/sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="mdc-school-name">
+            <div class="menu" id="menu"><img src="mdc-icon/menu.png" style="height: 20px;                
+            cursor: pointer;
+            padding-left: 8px;
+            padding-top: 6px;"></div>
+            <div class="logo-container"><img src="mdc-img/mdc-logo.jpg"></div>
+            <div class="school-name-container">
+                <div class="thpt">trường trung học phổ thông</div>
+                <div class="name">mạc đĩnh chi</div>
+            </div>
+        </div>
+        <div class="mdc-login">
+            <div class="info-container">
+                <div>trang chủ</div>
+                <div>môn học</div>
+                <div>hướng dẫn</div>
+                <div>tin tức</div>
+            </div>
+            <div class="login-container">
+                <button>Đăng nhập</button>
+                <div class="noti-container">
+                    <img src="mdc-icon/notification.png" class="noti-icon">
+                    <div class="tb-text">Thông báo</div>
+                </div>
+                <div class="find-container">
+                    <img src="mdc-icon/search.png" class="search-icon">
+                    <div class="tk-text">Tìm kiếm</div>
+                </div>                                        
+            </div>                
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">        
+        <!-- <div class="close">   
+                                   
+                            
+        </div> -->
+        <div class="close" id="close">                
+            <img src="mdc-icon/close.png" style="height: 20px;
+            padding-top: 3px;">
+            <div class="close-text">Đóng</div>                
+        </div>
+        
+        <div class="mini-sidebar" style="margin-top: 50px;">
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/home.png">
+                <div>Trang chủ</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/lesson.png">
+                <div>Khóa học</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/instruction.png">
+                <div>Hướng dẫn</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/news.png">
+                <div>Tin tức</div>
+            </div>                
+        </div> 
+        
+        <div class="MDC-ICON" style="
+        margin-top: 100px;
+        position: relative;">
+            <img src="mdc-img/mdc-logo.jpg" style="height: 60px;
+            padding-left: 60px;
+            padding-top: 10px;">
+            <p style="padding-left: 20px;
+            position: absolute;
+            top: 60px;
+            left: 1px;">THPT MẠC ĐĨNH CHI</p>
+        </div>
+    </div>
+    <nav>
+        <!-- <div class="slideshow-container" id="slideshow"> -->
+            <!-- <a class="prev" onclick="plusSlide(-1)">&#10094;</a> -->            
+            <!-- <a class="prev" onclick="plusSlide(1)">&#10094;</a> -->
+            <!-- <div class="mySlides fade" id="mySlide">
+                <img src="mdc-img/anime1.png" style="object-fit: cover;
+                width: 100%;">
+            </div>     -->
+                                              
+        <!-- </div> -->
+        
+        <div class="mySlides fade" id="mySlide">
+            <img src="mdc-img/xa1.png" style="
+            width: 100%;
+            object-fit: cover;" id="myImage">
+        </div>
+        <div class="mySlides fade" id="mySlide">
+            <img src="mdc-img/xa2.png" style="
+            width: 100%;                
+            object-fit: cover;" id="myImage">                
+        </div>
+        
+        
+        <div class="prev-container">
+            <a class="prev" id="prev-button" plusSlide(-1)">&#10094;</a>
+        </div>
+        <div class="next-container">
+            <a class="next" id="next-button" onclick="plusSlide(1)">&#10095;</a>
+        </div>
+            
+        <div style="font-weight: 700;
+        font-size: 20px;            
+        margin-top: 40px;
+        margin-bottom: -100px;
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;">TIN TỨC MỚI NHẤT</div>
+        <div class="thong-tin-container">
+            <div class="container">
+                <img src="mdc-img/giangday.jpg">
+                <div class="small-container">
+                    <div>Thông tin giảng dạy</div>
+                    <div style="font-size: 15px;">Tài Liệu Ôn Tập Thi Cuối Học Kì I Môn Vật Lý - Lương Tuấn Anh</div>
+                    <div class="ngay">Ngày đăng: 11/1/2024</div>
+                </div>                    
+            </div>
+            <div class="container">
+                <img src="mdc-img/suviet.jpg">
+                <div class="small-container">
+                    <div>Thông tin hoạt động</div>
+                    <div style="font-size: 15px;">Phát động Tham Gia Hội Thi Tự Hào Sử Việt Lần Thứ 2 - Năm 2023</div>
+                    <div class="ngay">Ngày đăng: 11/1/2024</div>
+                </div>                
+            </div>
+            <div class="container">
+                <img src="mdc-img/clb.jpg" style="width: 200px;
+                height: 150px;
+                object-fit: cover;">
+                <div class="small-container">
+                    <div>Thông tin câu lạc bộ</div>
+                    <div style="font-size: 15px;                        
+                    padding-bottom: 21px;">Câu Lạc Bộ Blue Shark Tuyên Bố Giải Thể</div>
+                    <div class="ngay">Ngày đăng: 11/1/2024</div>
+                </div>                    
+            </div>
+        </div>      
+        
+        <div class="nearly-footer">
+            <div class="nearly-footer-container" style="background-color: #FBE5D6">
+                <div class="icon"><img src="mdc-icon/ICON1.png"></div>
+                <div class="text1">THÔNG BÁO CHUNG</div>
+                <div class="text2" style="font-size: 10px;
+                text-transform: none;                    
+                padding-right: 10px;">Những thông báo quan trọng và sự kiện diễn ra trong thời gian sắp tới</div>
+                <div class="xemthem">XEM THÊM</div>
+            </div>
+
+            <div class="nearly-footer-container" style="background-color: #C5E0B4">
+                <div class="icon"><img src="mdc-icon/ICON2.png"></div>
+                <div class="text1">LỊCH THI</div>
+                <div class="text2" style="text-transform: none;
+                font-size: 10px;
+                padding-right: 10px;">Kế hoạch tổ chức các kỳ thi tập trung và các cuộc thi khác</div>
+                <div class="xemthem">XEM THÊM</div>
+            </div>
+
+            <div class="nearly-footer-container" style="background-color: #C0CFEA;">
+                <div class="icon"><img src="mdc-icon/ICON3.png"></div>
+                <div class="text1" style="width: 100%;
+                ">HOẠT ĐỘNG ĐOÀN</div>
+                <div class="text2" style="text-transform: none;
+                font-size: 10px;
+                padding-right: 10px;">Thông báo kế hoạch và thành quả các phong trào của Đoàn trường</div>
+                <div class="xemthem">XEM THÊM</div>
+            </div>
+            
+            <div class="nearly-footer-container" style="background-color: #FFE07D;">
+                <div class="icon"><img src="mdc-icon/ICON4.png"></div>
+                <div class="text1">CÂU LẠC BỘ</div>
+                <div class="text2" style="text-transform: none;">Thông tin và hoạt động của câu lạc bộ</div>
+                <div class="xemthem" style="margin-top: 17px;">XEM THÊM</div>
+            </div>
+        </div>
+    </nav>
+    
+    <footer>
+        <div class="footer1">
+            <div class="left-section">
+                <div><img src="mdc-img/mdc-icon.png"></div>
+                <div style="margin-left: 7px;">
+                    <div style="text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 11px;">hệ thống giáo dục trực tuyến</div>
+                    <div style="text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    margin-top: 2px;
+                    margin-bottom: 2px;">trường thpt mạc đĩnh chi</div>
+                    <div style="font-weight: 700;
+                    font-size: 10px;">Mac Dinh Chi High School E-learning System</div>
+                </div>
+            </div>
+            <div class="middle-section">
+                <div style="font-weight: 700;">WEBSITE</div>
+                <div style="font-size: 12px;
+                font-weight: 500;">TRANG CHỦ TRƯỜNG THPT MẠC ĐĨNH CHI</div>
+                <div style="font-size: 12px;
+                font-weight: 500;">BỘ GIÁO DỤC VÀ ĐÀO TẠO</div>
+            </div>
+            <div class="right-section">
+                <div style="font-weight: 700;">THÔNG TIN LIÊN LẠC</div>
+                <div class="ttll">                        
+                    <div><span><img src="mdc-icon/location.png"></span>Số 4 Tân Hòa Đông, Phường 14, Quận 6, Thành Phố Hồ Chí Minh</div>
+                </div>
+                <div class="ttll">                        
+                    <div><span><img src="mdc-icon/phone-call.png"></span>0948837138</div>
+                </div>
+                <div class="ttll">                        
+                    <div><span><img src="mdc-icon/email.png"></span>thptmdc6hcm@edu.com.vn</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer2">Copyright 2023 Office of Student Affairs. MDC - Powered by No man</div>
+       
+    </footer>
+
+    <script src="mdc-js/main.js"></script>    
+    <script>                
+        let containerWidth = document.getElementById('mySlide').parentElement.clientWidth;
+        let containerHeight = document.getElementById('mySlide').parentElement.clientHeight;
+        document.getElementById('mySlide').style.width = size.width + 'px';
+        document.getElementById('mySlide').style.height = size.height + 'px';
+        window.onresize = function() {
+            let containerWidth = document.getElementById('mySlide').parentElement.clientWidth;
+            let containerHeight = document.getElementById('mySlide').parentElement.clientHeight;
+            document.getElementById('mySlide').style.width = containerWidth + 'px';
+            document.getElementById('mySlide').style.height = containerHeight + 'px';            
+        }        
+    </script>
+    <script src="mdc-js/sidebar.js"></script>
+</body>
+</html>
+
+
