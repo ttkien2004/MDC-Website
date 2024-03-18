@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDC-NOTI</title>
+    <link rel="stylesheet" href="mdc-css/mdc_user.css">
+    <link rel="stylesheet" href="mdc-css/general.css">
+    <link rel="stylesheet" href="mdc-css/footer.css">
+    <link rel="stylesheet" href="mdc-css/sidebar.css">
+    <link rel="stylesheet" href="mdc-css/mdc_noti.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="mdc-school-name">
+            <div class="menu" id="menu"><img src="mdc-icon/menu.png" style="height: 20px;                
+            cursor: pointer;
+            padding-left: 8px;
+            padding-top: 6px;"></div>
+            <div class="logo-container" onclick="location.href='index.html'"><img src="mdc-img/mdc-logo.jpg"></div>
+            <div class="school-name-container">
+                <div class="thpt">trường trung học phổ thông</div>
+                <div class="name">mạc đĩnh chi</div>
+            </div>
+        </div>
+        <div class="mdc-login">
+            <div class="info-container">
+                <div onclick="location.href='index.html'">trang chủ</div>
+                <div onclick="location.href='mdc-user.html'">môn học</div>
+                <div>hướng dẫn</div>
+                <div>tin tức</div>
+            </div>
+            <div class="login-container">                    
+                <div class="noti-container">
+                    <img src="mdc-icon/notification.png" class="noti-icon">
+                    <div class="tb-text">Thông báo</div>
+                </div>
+                <div class="find-container">
+                    <img src="mdc-icon/search.png" class="search-icon">
+                    <div class="tk-text">Tìm kiếm</div>
+                </div>                                 
+                
+                <div class="user"></div>
+            </div>                
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">                    
+        <div class="close" id="close">                
+            <img src="mdc-icon/close.png" style="height: 20px;
+            padding-top: 3px;">
+            <div class="close-text">Đóng</div>                
+        </div>
+        
+        <div class="mini-sidebar" style="margin-top: 50px;">
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/home.png">
+                <div>Trang chủ</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/lesson.png">
+                <div>Khóa học</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/instruction.png">
+                <div>Hướng dẫn</div>
+            </div>            
+            <div class="mini-sidebar-container">
+                <img src="mdc-icon/news.png">
+                <div>Tin tức</div>
+            </div>                
+        </div> 
+        
+        <div class="MDC-ICON" style="
+        margin-top: 100px;
+        position: relative;">
+            <img src="mdc-img/mdc-logo.jpg" style="height: 60px;
+            padding-left: 60px;
+            padding-top: 10px;">
+            <p style="padding-left: 20px;
+            position: absolute;
+            top: 60px;
+            left: 1px;">THPT MẠC ĐĨNH CHI</p>
+        </div>
+    </div>
+
+    <div class="thong-bao-chung">
+        <div>THÔNG BÁO CHUNG</div>
+        <hr>
+    </div>
+
+    <nav class="thong-bao-header">            
+        <div class="thong-bao-content">
+            <img src="mdc-img/nvlh.jpg" style="height: 100%;
+            border-radius: 20px">
+            <div class="content">
+                <div style="font-size: 15px;
+                font-weight: 700;
+                margin-top: 20px;">Ngày đăng 31/02/2024</div>
+                <div style="font-size: 40px;
+                font-weight: 700;
+                margin-top: 10px;
+                margin-bottom: 10px;">Cuộc thi chế tạo mô hình tên lửa "nước" Lần thứ 24 
+                - CLB Newton</div>
+                <div style="font-size: 20px;
+                text-align: left;
+                padding-right: 60px;">
+                    Câu lạc bộ Vật Lý Newton tổ chức cuộc thi "Chế tạo mô hình Tên Lửa Nước Lần thứ 24". "Thông qua
+                    cuộc thi, học sinh sẽ hứng thú hơn với môn Vật Lý. Các em sẽ không còn cảm thấy đây là một môn học
+                    khô khan, khó nuốt và buồn chán" Lương Tuấn Anh.
+                </div>
+                <div style="position: absolute;
+                right: 30px;
+                color: rgb(0,164,0);
+                font-weight: 700;
+                margin-top: 10px;">XEM THÊM</div>
+            </div>
+        </div>                        
+    </nav>
+    <script src="mdc-js/sidebar.js"></script>
+</body>
+</html>
