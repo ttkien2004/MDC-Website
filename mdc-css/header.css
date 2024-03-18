@@ -150,11 +150,13 @@
     }    
     .menu{
         display: block;
+        /*khi ma header nho hon 980 thi menu xuat hien*/
     }
 }
 @media (min-width: 981px){
     .menu{
         display: none;
+        /*khi ma cai header lon hon hoac bang981px thi menu bi an*/
     }
 }
 @media (min-width: 986px){
@@ -166,4 +168,21 @@
     .login-container{
         margin-right: 50px;
     }   
+}
+@media (max-width: 582px){
+    .logo-container img{
+        height: 35px;
+        width: 35px;
+        padding-top: 12px;    
+        
+    }
+    .school-name-container .thpt{
+        font-size: 10px;
+        font-weight: 500;    
+        padding-top: 15px;
+    }
+    .school-name-container .name{
+        font-size: 15px;
+        font-weight: 700;
+    }
 }
