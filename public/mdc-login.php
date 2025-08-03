@@ -1,3 +1,10 @@
+<?php
+    if (isset($_SESSION['error'])) {
+        $err = $_SESSION['error'];
+        unset($_SESSION['error']);
+    }
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,35 +29,51 @@
             <div><img src="mdc-img/mdc-logo.jpg"></div>                
         </div>            
         <div class="container2">
-            <div class="sub-container">
+            <form method="post" action="../app/index.php?controller=auth&action=login">
+                <div class="sub-container">
                 <div class="img-container"><img src="mdc-icon/user.png"></div>
-                <input placeholder="Mã Học Sinh">
-            </div>
-            <div class="sub-container">
-                <div class="img-container"><img src="mdc-icon/padlock.png"></div>
-                <input placeholder="Mật Khẩu" type="password"  id="password">
-                <img src="mdc-icon/eye-close.png" id="eyeicon" style="margin-right: 10px;
-                cursor: pointer;
-                width: 30px;">
-            </div>
-            <div class="QMK">Quên mật khẩu?</div>
-            <div class="login-button"><button>ĐĂNG NHẬP</button></div>
+                <input placeholder="Email học sinh" type="email" name="email" id="email">
+                </div>
+                <div class="sub-container">
+                    <div class="img-container"><img src="mdc-icon/padlock.png"></div>
+                    <input placeholder="Mật Khẩu" type="password"  id="password" name="password">
+                    <img src="mdc-icon/eye-close.png" id="eyeicon" style="margin-right: 10px;
+                    cursor: pointer;
+                    width: 30px;">
+                </div>
+                <div class="QMK">Quên mật khẩu?</div>
+                <div class="login-button"><button type="submit">ĐĂNG NHẬP</button></div>
+                <div class="error" style="color: red;"></div>
+            </form>
         </div>            
     </div>
 
     <script>
-        let eyeicon = document.getElementById("eyeicon");
-        let password = document.getElementById("password");
+        document.addEventListener("DOMContentLoaded", function() {
+            let eyeicon = document.getElementById("eyeicon");
+            let password = document.getElementById("password");
 
-        eyeicon.onclick = function(){
-            if(password.type == "password"){
-                password.type = "text";
-                eyeicon.src = "mdc-icon/eye-open.png";
-            }else{
-                password.type = "password";
-                eyeicon.src = "mdc-icon/eye-close.png";
+            eyeicon.onclick = function(){
+                if(password.type == "password"){
+                    password.type = "text";
+                    eyeicon.src = "mdc-icon/eye-open.png";
+                }else{
+                    password.type = "password";
+                    eyeicon.src = "mdc-icon/eye-close.png";
+                }
             }
-        }
+
+            const err = "<?php echo isset($err) ? $err : ''; ?>";
+            if (err) {
+                const errDiv = document.querySelector('.error');
+                errDiv.textContent = err;
+                // errDiv.style.display = 'block';
+            }
+            document.getElementById("email").addEventListener("input", function() {
+                document.querySelector('.error').textContent = '';
+            });
+        });
+        
     </script>
 </body>
 </html>

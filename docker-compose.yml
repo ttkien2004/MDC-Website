@@ -1,14 +1,11 @@
-version: "3.8"
-
 services:
   php:
-    image: php:8.2-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: php-server
     ports:
       - "8080:80"
-    volumes:
-      - ./public:/var/www/html
-      - ./app:/var/www/html/app
     depends_on:
       - mysql
 
@@ -16,14 +13,13 @@ services:
     image: mysql:8.0
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: kien249
       MYSQL_DATABASE: mdc_db
-      MYSQL_USER: root
-      MYSQL_PASSWORD: kien249
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - db-data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
 
 volumes:
   db-data:
