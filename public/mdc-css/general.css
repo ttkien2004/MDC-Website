@@ -1,0 +1,10 @@
+body{
+    font-family: Roboto,Arial;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-top: 100px;    
+    position: relative;
+    overflow-x: hidden;
+    /* background-color: rgb(245,245,245); */
+}
