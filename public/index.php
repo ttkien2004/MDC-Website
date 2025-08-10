@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['email'])) {
+	$email = $_SESSION['email'];
+}
+?>
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -45,7 +52,9 @@
 					<div>tin tức</div>
 				</div>
 				<div class="login-container">
-					<button onclick="location.href='mdc-login.php'">Đăng nhập</button>
+					<div id="login-text">
+						<button onclick="location.href='mdc-login.php'">Đăng nhập</button>
+					</div>
 					<div class="noti-container">
 						<img src="mdc-icon/notification.png" class="noti-icon" />
 						<div class="tb-text">Thông báo</div>
@@ -315,5 +324,16 @@
 			};
 		</script>
 		<script src="mdc-js/sidebar.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const loginText = document.getElementById("login-text");
+				const email = "<?php echo $email ?>"
+				if (email) {
+					loginText.innerHTML = `<div style="font-weight: bold;">${email.substring(0, email.indexOf('@'))}</div>`;
+				} else {
+					loginText.innerHTML = `<button onclick="location.href='mdc-login.php'">Đăng nhập</button>`;
+				}
+			});
+		</script>
 	</body>
 </html>

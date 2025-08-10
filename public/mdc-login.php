@@ -1,8 +1,9 @@
 <?php
-    if (isset($_SESSION['error'])) {
-        $err = $_SESSION['error'];
-        unset($_SESSION['error']);
-    }
+session_start();
+if (isset($_SESSION['error'])) {
+    $err = $_SESSION['error'];
+    unset($_SESSION['error']);
+}
 ?>
 
 <html lang="en">

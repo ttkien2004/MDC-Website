@@ -1,6 +1,7 @@
-<?php 
+<?php
 require_once __DIR__ . '/../models/User.php';
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
+// require_once('../../public/index.php');
 
 class AuthController {
     private $userModel;
@@ -10,20 +11,18 @@ class AuthController {
     }
     
     public function login($email, $password) {
-        session_start();
         $user = $this->userModel->loginUser($email, $password);
-        if ($user) {            
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
-            header("Location: ../public/index.php");
+        if ($user) {
+            header("Location: /index.php");
             exit();
         }else {
             $_SESSION['error'] = "Invalid email or password";
+            header("Location: /mdc-login.php");
+            exit();
         }
     }
 
     public function register($email, $password) {
-        session_start();
         $email = $_POST['email'];
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 

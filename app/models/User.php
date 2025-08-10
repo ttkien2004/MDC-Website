@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 class User{
     private $connect;
 
@@ -33,7 +34,7 @@ class User{
                 // Set session variables
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-                return true;
+                return $user;
             }
         }
         return false;
